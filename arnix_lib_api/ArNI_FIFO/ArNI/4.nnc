@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf - 8"?>
+<SNN>
+  <RECEPTORS name="R" n="961">
+    <Implementation lib="fromFile">
+    	<args type="text"></args>
+    </Implementation>
+  </RECEPTORS>
+  <NETWORK>
+    <Sections>
+		<Section name="UL">
+			<props>
+				<n>3</n>
+				<chartime>2</chartime>
+				<weight_inc>0.136</weight_inc>
+				<stability_resource_change_ratio>0.2</stability_resource_change_ratio>
+				<minweight>0</minweight>
+				<maxweight>1.166</maxweight>
+				<dopamine_plasticity_time>2</dopamine_plasticity_time>
+				<threshold_decay_period>9</threshold_decay_period>
+				<threshold_inc>0.4544</threshold_inc>
+			</props>
+		</Section>
+		<Link from="R" to="UL" type="plastic" policy="all-to-all">
+			<IniResource type="uni">
+				<min>0</min>
+				<max>2.9739</max>
+			</IniResource>
+			<Delay type="uni">
+				<min>1</min>
+				<max>1</max>
+			</Delay>
+		</Link>
+    </Sections>
+  </NETWORK>
+  <Readout lib="toFile">
+  	<args type="text"></args>
+	<output>UL</output>
+  </Readout>
+</SNN>

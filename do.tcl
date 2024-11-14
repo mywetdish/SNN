@@ -1,0 +1,19 @@
+add wave -position end sim:/tb_top/input_intf/*
+add wave -position end sim:/tb_top/output_intf/*
+add wave -position end  sim:/tb_top/DUT/neuron1/clk_i
+add wave -position end  sim:/tb_top/DUT/neuron1/rst_i
+add wave -position end  sim:/tb_top/DUT/neuron1/spike_i
+add wave -position end  sim:/tb_top/DUT/neuron1/spike_o
+add wave -position end  sim:/tb_top/DUT/neuron1/next_stage
+add wave -position end  sim:/tb_top/DUT/neuron1/ren
+add wave -position end  sim:/tb_top/DUT/neuron1/stop
+add wave -position end  sim:/tb_top/DUT/neuron1/spike_rst
+add wave -position end  sim:/tb_top/DUT/neuron1/cnt
+add wave -position end  sim:/tb_top/DUT/neuron1/stage_1
+add wave -position end  sim:/tb_top/DUT/neuron1/spike_i_latch
+add wave -position end  sim:/tb_top/DUT/neuron1/r_addr
+add wave -position end  sim:/tb_top/DUT/neuron1/weight
+add wave -position end  sim:/tb_top/DUT/neuron1/result_temp
+add wave -position end  sim:/tb_top/DUT/neuron1/potential_threshold
+add wave -position end  sim:/tb_top/DUT/neuron1/basic_potential_threshold
+run -all
