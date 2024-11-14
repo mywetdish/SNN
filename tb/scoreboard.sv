@@ -36,10 +36,10 @@ class scoreboard;
             //$display("SCOREBOARD IN: %h\nSCOREBOARD OUT: %b\n",in_t.spike_i,out_t.spike_o);
             arnix_fifo(in_t.spike_i, 961, 3, arnix_out);
             if ( out_t.spike_o !== arnix_out ) begin
-                $error("%0t Invalid OUT: Real: %b, Expected: %b", $time(), out_t.spike_o, arnix_out);
+                $error("%d: %0t Invalid OUT: Real: %b, Expected: %b\nIn: %h\n", cnt, $time(), out_t.spike_o, arnix_out, in_t.spike_i);
             end
             else begin
-                $display("Transaction was Successful\n");
+                $display("%d: Transaction was Successful\nOut: %b\nIn: %h\n", cnt, out_t.spike_o, in_t.spike_i);
             end
             cnt = cnt + 1;
             if ( cnt == cfg.master_pkt_amount ) begin

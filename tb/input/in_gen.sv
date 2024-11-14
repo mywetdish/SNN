@@ -10,8 +10,8 @@ class in_gen;
         repeat(cfg.master_pkt_amount) begin
             t = new();
             t.spike_i = cnt;
+            $display("%d: Spike: %h",cnt,t.spike_i);
             cnt++;
-            $display("Spike: %h",t.spike_i);
             gen2drv.put(t);
         end/*
         repeat(cfg.master_pkt_amount) begin

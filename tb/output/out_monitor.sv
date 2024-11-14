@@ -26,7 +26,7 @@ class out_monitor;
             //@(posedge out_vif.clk);
             t = new();
             t.spike_o = out_vif.spike_o;
-            $display("%b",t.spike_o);
+            //$display("%b",t.spike_o);
             out_mbx.put(t);
         end
     endtask
