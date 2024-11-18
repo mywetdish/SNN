@@ -9,7 +9,7 @@ class in_gen;
         in_transaction t;
         repeat(cfg.master_pkt_amount) begin
             t = new();
-            t.spike_i = cnt;
+            t.spike_i = 961'd511;
             $display("%d: Spike: %h",cnt,t.spike_i);
             cnt++;
             gen2drv.put(t);

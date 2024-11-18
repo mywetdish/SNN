@@ -14,6 +14,8 @@ class scoreboard;
     virtual task run();
         done = 0;
         cnt = 0;
+        //arnix_fifo(961'd0, 961, 3, arnix_out);
+        //$display("Here is fake: %b",arnix_out);
         forever begin  
             wait(~in_reset);
             fork
