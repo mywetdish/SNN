@@ -22,6 +22,25 @@ void arnix_fifo(
             buff[j * 8 + bit] = (in[j] & (1 << bit)) ? '@' : '.';
         }
     }
+
+    // Initialize first and last pointers
+    int first = 0;
+    int last = in_size - 1;
+    char temp;
+
+    // Swap characters till first and last meet
+    while (first < last) {
+      
+        // Swap characters
+        temp = buff[first];
+        buff[first] = buff[last];
+        buff[last] = temp;
+
+        // Move pointers towards each other
+        first++;
+        last--;
+    }
+
     buff[in_size] = '\n';
     buff[in_size+1] = '\0';
     if ((fd_dpi = open("arnix_lib_api/ArNI_FIFO/fifo_dpi", O_WRONLY)) == -1) fprintf(stderr, "Can`t open fifo_dpi!");
